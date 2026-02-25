@@ -6,6 +6,10 @@
   <title>Kelley Undergraduate Graduation | Senior Recognition & Commencement Info</title>
   <meta name="description" content="Easy access links and key information for Kelley Undergraduate Graduation and Senior Recognition Ceremony." />
 
+  <!-- Favicons (add assets/iu-trident.png to your repo) -->
+  <link rel="icon" href="assets/iu-trident.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/iu-trident.png">
+
   <style>
     :root{
       /* Kelley-ish palette (approx) */
@@ -54,29 +58,39 @@
       gap: 12px;
       margin-bottom: 10px;
     }
+
+    /* IU logo badge */
     .mark{
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      background: var(--kelley-crimson);
+      background: #ffffff;
       display:grid;
       place-items:center;
-      color: white;
-      font-weight: 800;
-      letter-spacing: .5px;
-      box-shadow: 0 10px 22px rgba(122,0,25,.25);
+      border: 1px solid rgba(122,0,25,.18);
+      box-shadow: 0 10px 22px rgba(122,0,25,.18);
+      overflow: hidden;
       flex: 0 0 auto;
     }
+    .mark img{
+      width: 82%;
+      height: 82%;
+      object-fit: contain;
+      display:block;
+    }
+
+    /* Title sizing polish */
     .titleblock h1{
       margin:0;
-      font-size: 1.15rem;
-      line-height: 1.2;
+      font-size: 1.45rem;  /* was 1.15rem */
+      line-height: 1.15;
       letter-spacing: .2px;
     }
     .titleblock p{
-      margin: 3px 0 0;
+      margin: 4px 0 0;
       color: var(--muted);
-      font-size: .95rem;
+      font-size: 1.02rem;  /* was .95rem */
+      line-height: 1.35;
     }
 
     .hero{
@@ -90,21 +104,21 @@
     .hero .note{
       color: var(--muted);
       margin: 0;
-      max-width: 62ch;
-      font-size: .98rem;
-      line-height: 1.45;
+      max-width: 68ch;
+      font-size: 1.03rem; /* slightly larger */
+      line-height: 1.5;
     }
     .pill{
       display:inline-flex;
       align-items:center;
       gap: 8px;
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(122,0,25,.18);
       background: rgba(122,0,25,.06);
       color: var(--kelley-crimson);
-      font-weight: 600;
-      font-size: .9rem;
+      font-weight: 650;
+      font-size: .95rem;
       white-space: nowrap;
     }
 
@@ -126,15 +140,19 @@
       padding: 18px;
     }
 
+    /* Section heading polish */
     h2{
       margin: 0 0 10px;
-      font-size: 1.05rem;
+      font-size: 1.22rem; /* was 1.05rem */
       letter-spacing: .2px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
     .sub{
       margin: 0 0 14px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
+      font-size: 1rem;
     }
 
     .actions{
@@ -152,7 +170,7 @@
       border-radius: 12px;
       border: 1px solid rgba(122,0,25,.25);
       text-decoration:none;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: .2px;
       transition: transform .08s ease, box-shadow .08s ease, background .08s ease;
       user-select:none;
@@ -199,13 +217,13 @@
     .item strong{
       display:block;
       margin-bottom: 6px;
-      font-size: .98rem;
+      font-size: 1.02rem; /* slightly larger */
     }
     .item p{
       margin: 0;
       color: var(--muted);
-      line-height: 1.5;
-      font-size: .95rem;
+      line-height: 1.55;
+      font-size: .98rem;
     }
 
     .quicklinks{
@@ -230,38 +248,37 @@
     }
     .qlink .dot{
       width: 10px; height: 10px;
-      margin-top: 5px;
+      margin-top: 6px;
       border-radius: 999px;
       background: var(--kelley-crimson);
       box-shadow: 0 8px 14px rgba(122,0,25,.25);
       flex: 0 0 auto;
     }
-    .qlink .meta{
-      display:block;
-    }
+    .qlink .meta{ display:block; }
     .qlink .meta .t{
-      font-weight: 800;
+      font-weight: 850;
       margin-bottom: 2px;
+      font-size: 1rem;
     }
     .qlink .meta .d{
       color: var(--muted);
-      font-size: .92rem;
+      font-size: .94rem;
       line-height: 1.35;
     }
 
     footer{
       margin-top: 18px;
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .92rem;
       text-align:center;
     }
     .tiny{
-      font-size: .85rem;
+      font-size: .88rem;
       color: var(--muted);
     }
     .email{
       color: var(--kelley-crimson);
-      font-weight: 800;
+      font-weight: 850;
       text-decoration: none;
     }
     .email:hover{ text-decoration: underline; }
@@ -272,7 +289,11 @@
   <div class="wrap">
     <header>
       <div class="brandbar">
-        <div class="mark" aria-hidden="true">K</div>
+        <!-- Add assets/iu-trident.png to your repo -->
+        <div class="mark" aria-label="Indiana University">
+          <img src="assets/iu-trident.png" alt="Indiana University logo" />
+        </div>
+
         <div class="titleblock">
           <h1>Kelley Undergraduate Graduation</h1>
           <p>Senior Recognition Ceremony + IU Commencement Program & Diploma Info</p>
@@ -281,8 +302,8 @@
 
       <div class="hero">
         <p class="note">
-          This page is a quick, easy “one-stop” place ONLY for THE BEST parents and students to find the right links.
-          If you applied on time for graduation, your kid should've received a formal invitation by mail with RSVP directions.
+          This page is a quick, easy one-stop place for parents and students to find the correct links.
+          If you applied on time for graduation, you will receive a formal invitation by mail with RSVP directions.
         </p>
         <span class="pill" title="For questions, contact Kelley Undergraduate at ksbrec@iu.edu">
           Questions? Email <a class="email" href="mailto:ksbrec@iu.edu">ksbrec@iu.edu</a>
@@ -295,7 +316,8 @@
       <section class="card" aria-labelledby="senior-recognition">
         <h2 id="senior-recognition">Senior Recognition Ceremony (Kelley)</h2>
         <p class="sub">
-          If you applied on time for graduation, you will receive a formal invitation by mail for the May Kelley Undergraduate Senior Recognition, with directions on how to RSVP.
+          If you applied on time for graduation, you will receive a formal invitation by mail for the May Kelley Undergraduate Senior Recognition,
+          with directions on how to RSVP.
         </p>
 
         <div class="actions">
@@ -354,7 +376,7 @@
             <strong>Diploma Mailing: Verify Your Address</strong>
             <p>
               Diplomas are mailed by the Office of the Registrar. Please verify your address using Student Central.
-              The Registrar will mail your diploma approximately <b>three months</b> after your graduation date.
+              The Office of the Registrar will mail your diploma approximately <b>three months</b> after your graduation date.
             </p>
             <div class="actions" style="margin-top:10px;">
               <a class="btn btn-secondary"
