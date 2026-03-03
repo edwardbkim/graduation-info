@@ -3,111 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelley Undergraduate Graduation | Senior Recognition & Commencement Info</title>
-  <meta name="description" content="Easy access links and key information for Kelley Undergraduate Graduation and Senior Recognition Ceremony." />
+  <title>Kelley Graduation Info | Senior Send-Off + IU Commencement</title>
+  <meta name="description" content="Parent-friendly one-stop links and key details for Kelley Senior Send-Off and IU Commencement." />
 
-  <!-- Favicons (add assets/iu-trident.png to your repo) -->
+  <!-- Favicons -->
   <link rel="icon" href="assets/iu-trident.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/iu-trident.png">
 
   <style>
     :root{
-      /* Kelley-ish palette (approx) */
-      --kelley-crimson: #7a0019;
-      --kelley-cream: #f6f0e6;
-      --ink: #111827;
-      --muted: #4b5563;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --shadow: 0 10px 30px rgba(0,0,0,.08);
-      --radius: 16px;
+      --kelley-crimson:#7a0019;
+      --kelley-cream:#f6f0e6;
+      --ink:#111827;
+      --muted:#4b5563;
+      --card:#ffffff;
+      --border:#e5e7eb;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:16px;
     }
-
-    *{ box-sizing: border-box; }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color: var(--ink);
+      color:var(--ink);
       background:
         radial-gradient(900px 500px at 20% -10%, rgba(122,0,25,.18), transparent 60%),
         radial-gradient(900px 500px at 80% -10%, rgba(122,0,25,.10), transparent 60%),
         linear-gradient(180deg, var(--kelley-cream), #ffffff 40%);
     }
-
-    a{ color: inherit; }
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 56px;
-    }
+    a{ color:inherit; }
+    .wrap{ max-width: 1040px; margin: 0 auto; padding: 28px 18px 56px; }
 
     header{
       border: 1px solid rgba(122,0,25,.15);
-      background: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.74);
       backdrop-filter: blur(8px);
       border-radius: var(--radius);
-      padding: 18px 18px 16px;
+      padding: 18px;
       box-shadow: var(--shadow);
-      position: relative;
       overflow: hidden;
     }
-
-    .brandbar{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    /* IU logo badge */
+    .brandbar{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
     .mark{
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: #ffffff;
-      display:grid;
-      place-items:center;
-      border: 1px solid rgba(122,0,25,.18);
-      box-shadow: 0 10px 22px rgba(122,0,25,.18);
-      overflow: hidden;
-      flex: 0 0 auto;
+      width: 46px; height: 46px; border-radius: 12px;
+      background:#fff;
+      display:grid; place-items:center;
+      border:1px solid rgba(122,0,25,.18);
+      box-shadow:0 10px 22px rgba(122,0,25,.18);
+      overflow:hidden;
+      flex:0 0 auto;
     }
-    .mark img{
-      width: 82%;
-      height: 82%;
-      object-fit: contain;
-      display:block;
-    }
+    .mark img{ width: 82%; height: 82%; object-fit: contain; display:block; }
 
-    /* Title sizing polish */
     .titleblock h1{
       margin:0;
-      font-size: 1.45rem;  /* was 1.15rem */
-      line-height: 1.15;
+      font-size: 1.65rem;
+      line-height: 1.12;
       letter-spacing: .2px;
     }
     .titleblock p{
       margin: 4px 0 0;
       color: var(--muted);
-      font-size: 1.02rem;  /* was .95rem */
+      font-size: 1.04rem;
       line-height: 1.35;
     }
 
     .hero{
       display:flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-top: 12px;
-      align-items:center;
+      align-items:flex-start;
       justify-content: space-between;
     }
     .hero .note{
       color: var(--muted);
       margin: 0;
-      max-width: 68ch;
-      font-size: 1.03rem; /* slightly larger */
-      line-height: 1.5;
+      max-width: 78ch;
+      font-size: 1.03rem;
+      line-height: 1.55;
     }
+
     .pill{
       display:inline-flex;
       align-items:center;
@@ -117,20 +94,38 @@
       border: 1px solid rgba(122,0,25,.18);
       background: rgba(122,0,25,.06);
       color: var(--kelley-crimson);
-      font-weight: 650;
+      font-weight: 750;
       font-size: .95rem;
       white-space: nowrap;
     }
+    .email{ color: var(--kelley-crimson); font-weight: 900; text-decoration:none; }
+    .email:hover{ text-decoration: underline; }
+
+    .toplinks{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .chip{
+      text-decoration:none;
+      font-weight: 800;
+      color: var(--kelley-crimson);
+      border: 1px solid rgba(122,0,25,.20);
+      background: rgba(122,0,25,.04);
+      padding: 10px 12px;
+      border-radius: 12px;
+      transition: transform .08s ease, background .08s ease;
+    }
+    .chip:hover{ background: rgba(122,0,25,.06); transform: translateY(-1px); }
 
     main{
       margin-top: 18px;
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.35fr .65fr;
       gap: 16px;
     }
-    @media (max-width: 860px){
-      main{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px){ main{ grid-template-columns: 1fr; } }
 
     .card{
       background: var(--card);
@@ -140,10 +135,9 @@
       padding: 18px;
     }
 
-    /* Section heading polish */
     h2{
       margin: 0 0 10px;
-      font-size: 1.22rem; /* was 1.05rem */
+      font-size: 1.26rem;
       letter-spacing: .2px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
@@ -151,9 +145,19 @@
     .sub{
       margin: 0 0 14px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       font-size: 1rem;
     }
+
+    .banner{
+      border: 1px solid rgba(122,0,25,.18);
+      background: rgba(122,0,25,.05);
+      border-radius: 14px;
+      padding: 12px;
+      margin: 12px 0 0;
+    }
+    .banner strong{ display:block; margin-bottom: 6px; }
+    .banner p{ margin:0; color: var(--muted); line-height: 1.6; }
 
     .actions{
       display:flex;
@@ -170,83 +174,69 @@
       border-radius: 12px;
       border: 1px solid rgba(122,0,25,.25);
       text-decoration:none;
-      font-weight: 750;
+      font-weight: 850;
       letter-spacing: .2px;
       transition: transform .08s ease, box-shadow .08s ease, background .08s ease;
       user-select:none;
     }
-    .btn:focus{
-      outline: 3px solid rgba(122,0,25,.25);
-      outline-offset: 2px;
-    }
+    .btn:focus{ outline: 3px solid rgba(122,0,25,.25); outline-offset: 2px; }
     .btn-primary{
       background: var(--kelley-crimson);
       color: #fff;
-      border-color: rgba(122,0,25,.25);
       box-shadow: 0 14px 24px rgba(122,0,25,.22);
     }
     .btn-primary:hover{ transform: translateY(-1px); }
     .btn-secondary{
-      background: #fff;
+      background:#fff;
       color: var(--kelley-crimson);
     }
-    .btn-secondary:hover{
-      background: rgba(122,0,25,.04);
-      transform: translateY(-1px);
-    }
+    .btn-secondary:hover{ background: rgba(122,0,25,.04); transform: translateY(-1px); }
 
-    .icon{
-      width: 18px;
-      height: 18px;
-      display:inline-block;
-    }
-
-    .list{
-      margin: 10px 0 0;
-      padding: 0;
-      list-style: none;
+    .grid2{
       display:grid;
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
-    }
-    .item{
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px 12px 12px;
-      background: linear-gradient(180deg, #fff, #fff);
-    }
-    .item strong{
-      display:block;
-      margin-bottom: 6px;
-      font-size: 1.02rem; /* slightly larger */
-    }
-    .item p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: .98rem;
-    }
-
-    .quicklinks{
-      display:grid;
-      gap: 10px;
       margin-top: 10px;
     }
+    @media (max-width: 700px){ .grid2{ grid-template-columns: 1fr; } }
+
+    .event{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      background: #fff;
+    }
+    .event h3{ margin:0 0 6px; font-size: 1.06rem; }
+    .event p{ margin:0; color: var(--muted); line-height: 1.55; }
+    .tag{
+      display:inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(122,0,25,.06);
+      border: 1px solid rgba(122,0,25,.18);
+      color: var(--kelley-crimson);
+      font-weight: 900;
+      font-size: .9rem;
+    }
+
+    .list{ margin: 10px 0 0; padding: 0; list-style: none; display:grid; gap: 12px; }
+    .item{ border: 1px solid var(--border); border-radius: 14px; padding: 12px; background:#fff; }
+    .item strong{ display:block; margin-bottom: 6px; font-size: 1.02rem; }
+    .item p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: .98rem; }
+
+    .quicklinks{ display:grid; gap: 10px; margin-top: 10px; }
     .qlink{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
+      display:flex; gap: 10px; align-items:flex-start;
       padding: 12px;
       border-radius: 14px;
       border: 1px solid var(--border);
       background: #fff;
-      text-decoration: none;
+      text-decoration:none;
       transition: transform .08s ease, background .08s ease;
     }
-    .qlink:hover{
-      background: rgba(122,0,25,.03);
-      transform: translateY(-1px);
-    }
-    .qlink .dot{
+    .qlink:hover{ background: rgba(122,0,25,.03); transform: translateY(-1px); }
+    .dot{
       width: 10px; height: 10px;
       margin-top: 6px;
       border-radius: 999px;
@@ -254,34 +244,15 @@
       box-shadow: 0 8px 14px rgba(122,0,25,.25);
       flex: 0 0 auto;
     }
-    .qlink .meta{ display:block; }
-    .qlink .meta .t{
-      font-weight: 850;
-      margin-bottom: 2px;
-      font-size: 1rem;
-    }
-    .qlink .meta .d{
-      color: var(--muted);
-      font-size: .94rem;
-      line-height: 1.35;
-    }
+    .meta .t{ font-weight: 900; margin-bottom: 2px; display:block; font-size: 1rem; }
+    .meta .d{ color: var(--muted); font-size: .94rem; line-height: 1.35; display:block; }
 
-    footer{
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: .92rem;
-      text-align:center;
-    }
-    .tiny{
-      font-size: .88rem;
-      color: var(--muted);
-    }
-    .email{
-      color: var(--kelley-crimson);
-      font-weight: 850;
-      text-decoration: none;
-    }
-    .email:hover{ text-decoration: underline; }
+    footer{ margin-top: 18px; color: var(--muted); font-size: .92rem; text-align:center; }
+    .tiny{ font-size: .88rem; color: var(--muted); }
+    .divider{ height:1px; background: var(--border); border:0; margin: 14px 0; }
+
+    /* Small “official tone” polish */
+    .k{ color: var(--kelley-crimson); font-weight: 900; }
   </style>
 </head>
 
@@ -289,122 +260,194 @@
   <div class="wrap">
     <header>
       <div class="brandbar">
-        <!-- Add assets/iu-trident.png to your repo -->
         <div class="mark" aria-label="Indiana University">
           <img src="assets/iu-trident.png" alt="Indiana University logo" />
         </div>
-
         <div class="titleblock">
-          <h1>Kelley Undergraduate Graduation</h1>
-          <p>Senior Recognition Ceremony + IU Commencement Program & Diploma Info</p>
+          <h1>Kelley Graduation Info</h1>
+          <p>Kelley Senior Send-Off (Kelley) + IU Commencement (University-wide)</p>
         </div>
       </div>
 
       <div class="hero">
         <p class="note">
-          This page is a quick, easy one-stop place created for (the BEST) parents to find all the correct graduation links.
+          This page is a clean, parent-friendly hub for the official links and key steps.
+          <strong>Kelley Senior Send-Off is separate from IU Commencement</strong>, and each has its own information and registration.
         </p>
-        <span class="pill" title="For questions, contact Kelley Undergraduate at ksbrec@iu.edu">
+        <span class="pill" title="Kelley questions: ksbrec@iu.edu">
           Questions? Email <a class="email" href="mailto:ksbrec@iu.edu">ksbrec@iu.edu</a>
         </span>
+      </div>
+
+      <div class="toplinks" aria-label="Page navigation">
+        <a class="chip" href="#sendoff">Kelley Senior Send-Off</a>
+        <a class="chip" href="#iu">IU Commencement</a>
+        <a class="chip" href="#program-diploma">Commencement Program & Diploma</a>
       </div>
     </header>
 
     <main>
-      <!-- Main content -->
-      <section class="card" aria-labelledby="senior-recognition">
-        <h2 id="senior-recognition">Senior Recognition Ceremony (Kelley)</h2>
-        <p class="sub">
-          You'll receive a formal invitation by mail for the May Kelley Undergraduate Senior Recognition,
-          with directions on how to RSVP.
-        </p>
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- Kelley Senior Send-Off -->
+        <section class="card" id="sendoff" aria-labelledby="sendoff-title">
+          <h2 id="sendoff-title">Kelley Senior Send-Off</h2>
+          <p class="sub">
+            The <span class="k">Kelley Senior Send-Off</span> ceremony is hosted by the Kelley School of Business and is
+            <strong>separate</strong> from IU Commencement.
+          </p>
 
-        <div class="actions">
-          <a class="btn btn-primary"
-             href="https://kelley.iu.edu/programs/undergrad/campaigns/student-life/senior-recognition/index.cshtml"
-             target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M14 3h7v7" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <path d="M21 3l-9 9" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <path d="M10 7H7a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            Senior Recognition Info (RSVP + Details)
-          </a>
-
-          <a class="btn btn-secondary" href="mailto:ksbrec@iu.edu">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
-              <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" />
-            </svg>
-            Email Kelley (ksbrec@iu.edu)
-          </a>
-        </div>
-
-        <ul class="list" aria-label="Extra information">
-          <li class="item">
-            <strong>IU Commencement Program: Name + Hometown + Distinction Honors</strong>
+          <div class="banner">
+            <strong>Action required (registration)</strong>
             <p>
-              Your name, hometown, and distinction honors (if applicable) will appear in the IU Commencement Program.
-              Your hometown will be listed as it appears in One.IU.
+              Applying for graduation is <strong>not</strong> the same as registering for Kelley Senior Send-Off.
+              If you received an email reminder, it means you have already applied for graduation but have <strong>not</strong>
+              registered for Senior Send-Off yet. To participate, please complete the Kelley Senior Send-Off registration form.
+              If you do not register by the deadline, the office will assume you are not attending and your assigned time may be released.
             </p>
-            <div class="actions" style="margin-top:10px;">
-              <a class="btn btn-secondary"
-                 href="http://studentcentral.indiana.edu/personal-information/update-information/address.shtml"
-                 target="_blank" rel="noopener noreferrer">
-                Update Hometown / Address (Student Central)
-              </a>
-            </div>
-          </li>
+          </div>
 
-          <li class="item">
-            <strong>Diploma: Official Name Changes</strong>
+          <div class="grid2" aria-label="Kelley Senior Send-Off event times">
+            <div class="event">
+              <h3>Saturday, May 9 — 9:00 AM</h3>
+              <p><strong>Simon Skjodt Assembly Hall</strong></p>
+              <span class="tag">Last names A–M</span>
+            </div>
+            <div class="event">
+              <h3>Saturday, May 9 — 12:00 PM</h3>
+              <p><strong>Simon Skjodt Assembly Hall</strong></p>
+              <span class="tag">Last names N–Z</span>
+            </div>
+          </div>
+
+          <div class="banner">
+            <strong>What the registration form covers</strong>
             <p>
-              If you wish to change your official name, contact the Student Central office.
-              More information is available at the link below.
+              The form includes: (1) requests for an alternate ceremony time, (2) accommodations for yourself and/or guests,
+              and (3) the phonetic pronunciation of your name. Please complete registration even if you are already assigned to your preferred time.
+              Confirmation emails are sent <strong>weekly</strong>, so you may not receive an immediate response.
             </p>
-            <div class="actions" style="margin-top:10px;">
-              <a class="btn btn-secondary"
-                 href="https://studentcentral.indiana.edu/transcripts/diplomas/index.html"
-                 target="_blank" rel="noopener noreferrer">
-                Diploma Information (Student Central)
-              </a>
-            </div>
-          </li>
+          </div>
 
-          <li class="item">
-            <strong>Diploma Mailing: Verify Your Address</strong>
-            <p>
-              Diplomas are mailed by the Office of the Registrar. Please verify your address using Student Central.
-              The Office of the Registrar will mail your diploma approximately <b>three months</b> after your graduation date.
-            </p>
-            <div class="actions" style="margin-top:10px;">
-              <a class="btn btn-secondary"
-                 href="http://studentcentral.indiana.edu/personal-information/update-information/address.shtml"
-                 target="_blank" rel="noopener noreferrer">
-                Verify Address for Diploma Mailing
-              </a>
-            </div>
-          </li>
-        </ul>
+          <div class="actions">
+            <!-- Keep your existing Kelley Send-Off link as-is -->
+            <a class="btn btn-primary"
+               href="https://kelley.iu.edu/programs/undergrad/campaigns/student-life/senior-recognition/index.cshtml"
+               target="_blank" rel="noopener noreferrer">
+              Kelley Senior Send-Off (RSVP + Details)
+            </a>
 
-        <p class="tiny" style="margin-top:14px;">
-          Tip: Bookmark this page and share it in your family group chat so everyone knows the links.
-        </p>
-      </section>
+            <a class="btn btn-secondary" href="mailto:ksbrec@iu.edu">
+              Email Kelley (ksbrec@iu.edu)
+            </a>
+          </div>
+        </section>
 
-      <!-- Sidebar: quick links -->
+        <!-- IU Commencement -->
+        <section class="card" id="iu" aria-labelledby="iu-title" style="margin-top:16px;">
+          <h2 id="iu-title">IU Commencement (University-wide)</h2>
+          <p class="sub">
+            IU Commencement is organized by Indiana University and is separate from Kelley’s ceremony.
+            For official IU undergraduate commencement details and what to expect, use the link below.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary"
+               href="https://commencement.indiana.edu/commencement-day/what-to-expect/spring-undergrad.html"
+               target="_blank" rel="noopener noreferrer">
+              IU Commencement: What to Expect (Spring Undergrad)
+            </a>
+          </div>
+        </section>
+
+        <!-- Program + Diploma -->
+        <section class="card" id="program-diploma" aria-labelledby="pd-title" style="margin-top:16px;">
+          <h2 id="pd-title">Commencement Program & Diploma</h2>
+
+          <ul class="list" aria-label="Program and diploma details">
+            <li class="item">
+              <strong>IU Commencement Program: Name + Hometown + Distinction Honors</strong>
+              <p>
+                Your name, hometown, and distinction honors (if applicable) will appear in the IU Commencement Program.
+                Your hometown will be listed as it appears in One.IU.
+              </p>
+              <div class="actions" style="margin-top:10px;">
+                <a class="btn btn-secondary"
+                   href="http://studentcentral.indiana.edu/personal-information/update-information/address.shtml"
+                   target="_blank" rel="noopener noreferrer">
+                  Update Hometown / Address (Student Central)
+                </a>
+              </div>
+            </li>
+
+            <li class="item">
+              <strong>Diploma: Official Name Changes</strong>
+              <p>
+                If you wish to change your official name, contact the Student Central office.
+                More information is available at the link below.
+              </p>
+              <div class="actions" style="margin-top:10px;">
+                <a class="btn btn-secondary"
+                   href="https://studentcentral.indiana.edu/transcripts/diplomas/index.html"
+                   target="_blank" rel="noopener noreferrer">
+                  Diploma Information (Student Central)
+                </a>
+              </div>
+            </li>
+
+            <li class="item">
+              <strong>Diploma Mailing: Verify Your Address</strong>
+              <p>
+                Diplomas are mailed by the Office of the Registrar. Please verify your address using Student Central.
+                The Office of the Registrar will mail your diploma approximately <strong>three months</strong> after your graduation date.
+              </p>
+              <div class="actions" style="margin-top:10px;">
+                <a class="btn btn-secondary"
+                   href="http://studentcentral.indiana.edu/personal-information/update-information/address.shtml"
+                   target="_blank" rel="noopener noreferrer">
+                  Verify Address for Diploma Mailing
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <p class="tiny" style="margin-top:14px;">
+            Tip: Bookmark this page and share it with family so everyone uses the same official links.
+          </p>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
       <aside class="card" aria-labelledby="quick-links">
         <h2 id="quick-links">Quick Links</h2>
-        <p class="sub">These go directly to the official pages (no scrolling required).</p>
+        <p class="sub">Direct links to official pages (no searching required).</p>
 
         <div class="quicklinks">
+          <a class="qlink" href="#sendoff">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="meta">
+              <span class="t">Kelley Senior Send-Off</span>
+              <span class="d">Event times, registration distinction, and key form notes</span>
+            </span>
+          </a>
+
+          <a class="qlink"
+             href="https://commencement.indiana.edu/commencement-day/what-to-expect/spring-undergrad.html"
+             target="_blank" rel="noopener noreferrer">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="meta">
+              <span class="t">IU Commencement Info</span>
+              <span class="d">University-wide commencement details</span>
+            </span>
+          </a>
+
           <a class="qlink"
              href="https://kelley.iu.edu/programs/undergrad/campaigns/student-life/senior-recognition/index.cshtml"
              target="_blank" rel="noopener noreferrer">
             <span class="dot" aria-hidden="true"></span>
             <span class="meta">
-              <span class="t">Senior Recognition Ceremony</span>
-              <span class="d">RSVP details + official Kelley info page</span>
+              <span class="t">Send-Off RSVP + Details (Kelley)</span>
+              <span class="d">Official Kelley page for Senior Send-Off/Senior Recognition</span>
             </span>
           </a>
 
@@ -414,7 +457,7 @@
             <span class="dot" aria-hidden="true"></span>
             <span class="meta">
               <span class="t">Update / Verify Address</span>
-              <span class="d">For hometown listing + diploma mailing address</span>
+              <span class="d">Hometown listing + diploma mailing address</span>
             </span>
           </a>
 
@@ -440,8 +483,8 @@
     </main>
 
     <footer>
-      <div>© <span id="year"></span> Kelley Undergraduate Graduation Info</div>
-      <div class="tiny">Unofficial convenience page. Links point to official IU/Kelley sites we received for the 2025-26 school year.</div>
+      <div>© <span id="year"></span> Kelley Graduation Info</div>
+      <div class="tiny">Unofficial convenience page — links point to official IU/Kelley sites.</div>
     </footer>
   </div>
 
